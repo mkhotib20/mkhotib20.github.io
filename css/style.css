@@ -208,15 +208,7 @@ footer p{
 
 }
 
-.navbar{
-  box-shadow: 1px 0px 15px;
-  height: auto;
-  padding-left: 30px;
-}
 
-.navbar-nav li{
-  margin-left: 30px;
-}
 
 .navbar-nav li a{
   text-transform: uppercase;
@@ -444,6 +436,15 @@ footer p{
     padding-right: 40px;
   }
 @media(min-width: 992px){
+  .navbar{
+    box-shadow: 1px 0px 15px;
+    height: auto;
+    padding-left: 30px;
+  }
+
+  .navbar-nav li{
+    margin-left: 30px;
+  }
     
   .colour-title{
     margin-left: 20px;
