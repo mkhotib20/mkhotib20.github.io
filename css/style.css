@@ -139,10 +139,8 @@ header.masthead h1 {
 }
 
 footer{
-  padding-top: 5rem;
-  padding-bottom: 2rem;
-  min-height: 300px;
-  background: url('../img/bg-footer.png') bottom right no-repeat;
+  padding-top: 2rem;
+  min-height: 200px;
   background-size: cover;
   color: white;
   letter-spacing: 10px;
@@ -182,6 +180,7 @@ footer p{
   font-weight: bold;
   letter-spacing: 4px;
   font-size: 12px;
+  margin-top: 120px;
 }
 
 .hb-dark{
@@ -384,10 +383,7 @@ footer p{
 .project-3{
   height: 200px;
 }
-.satu h3{
-  text-align: center;
-  line-height: 200px;
-}
+
 .project-1{
   height: 600px;
 }
@@ -397,11 +393,7 @@ footer p{
 .bg-grey{
   background-color: #dbdbdb;
 }
-.dua h3{
-  text-align: right;
-  line-height: 350px;
-  margin-right: 10px;
-}
+  
 .bg-grey p{
   padding: 7px;
   letter-spacing: 2px;
@@ -411,12 +403,13 @@ footer p{
 .project-quote{
   margin-left: 30px;
   min-height: 60px;
+  font-size: 25px;
   padding: 30px;
   text-align: center;
   margin-bottom: unset;
 }
-.project-quote span{
-  margin-left: -30px;
+.spanduk{
+  margin-left: 25px;
   font-weight: bold;
   font-size: 60px;
 }
@@ -436,6 +429,38 @@ footer p{
     padding-right: 40px;
   }
 @media(min-width: 992px){
+  .quotes{
+    padding: 60px;
+
+  }
+  blockquote{
+    font-style: italic;
+    width: auto;
+    margin: 0em 30px;
+    padding: 0.35em 30px;
+    line-height: 1.45;
+    position: relative;
+    color: black;
+    font-size: 25px;
+  }
+  blockquote cite{
+    font-size: 19px;
+  }
+  .project-3{
+    height: 200px;
+  }
+  .satu h3{
+    text-align: center;
+    line-height: 200px;
+  }
+  .dua h3{
+    text-align: right;
+    line-height: 350px;
+    margin-right: 10px;
+  }
+  footer{
+    background: url('../img/bg-footer.png') bottom right no-repeat;
+  }
   .navbar{
     box-shadow: 1px 0px 15px;
     height: auto;
@@ -454,6 +479,57 @@ footer p{
   }
 }
 @media(max-width: 992px){
+
+  blockquote{
+    font-style: italic;
+    width: auto;
+    margin: 0em 6px;
+    padding: 0.35em 30px;
+    padding-right: 10px;
+    line-height: 1.45;
+    position: relative;
+    color: black;
+    font-size: 23px;
+  }
+  blockquote cite{
+    font-size: 17px;
+  }
+  .quotes{
+    padding: 20px;
+    
+  }
+  .mb{
+    min-height: 70px;
+    height: auto;
+  }
+
+  .project-3 h3{
+    margin-top: 6px;
+    text-align: right;
+  }
+  .satu h3{
+      text-align: center;
+    }
+
+  .satu{
+    height: 70px;
+  }
+  .dua{
+    padding-top: 15px;
+    height: 70px;
+  }
+  .dua h3{
+    text-align: right;
+    margin-right: 10px;
+  }
+  footer{
+    background-color: black;
+    padding: 10px;
+    padding-top: 20px;
+  }
+  footer img{
+    height: 70px;
+  }
   .frame{
     margin-top: 100px;
     margin-right: 20px;
@@ -482,9 +558,11 @@ footer p{
   .box{
     width: 100%;
   }
+  .footer-mobile{    
+    margin-bottom: 20px;
+  }
   .footer-mobile{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    font-size: 14px;
   }
   .footer-mobile h4{
     margin-bottom: 10px;
@@ -500,5 +578,8 @@ footer p{
   }
   .colour-title{
     width: 100%;
+  }
+  .project-quote{
+    font-size: 20px;
   }
 }
