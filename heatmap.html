@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <title>Donut Chart</title>
+  </head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Projek D3js</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home - Calendar View <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">Bubble Map</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index1.html">Bar Chart</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="donut.html">Donat Chart</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="streamgraph.html">Streamgraph</a>
+                </li>
+                <li class="nav-item active">
+                        <a class="nav-link" href="heatmap.html">HeatMap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Load d3.js & color scale -->
+<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div class="container shadow p-3 mb-5 bg-white rounded">
+    <div id="my_dataviz"></div>
+</div>
+
+<script>
+
+// set the dimensions and margins of the graph
+var margin = {top: 30, right: 30, bottom: 30, left: 130},
+  width = 850 - margin.left - margin.right,
+  height = 750 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+.append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+
+// Build color scale
+var myColor = d3.scaleLinear()
+  .range(["white", "red"])
+  .domain([0,20])
+
+//Read the data
+d3.csv("data/taxi2.csv", function(data) {
+  var nestData = d3.nest()
+    .key(function(d) { return d.vendor_id })
+    .key(function(d) { return d.pickup_datetime.substr(11,2); })
+    .rollup(function(v) { return v.length })
+    .entries(data)
+    var dataAkhir = [];
+    nestData.forEach(function(d){
+      
+      d.values.forEach(function(v){
+        var dta = {
+          vendor: d.key,
+          time: v.key,
+          count: v.value
+        }
+      dataAkhir.push(dta);
+      })
+    })
+
+  
+  data.sort(function (a,b) {return d3.ascending(a.pickup_datetime.substr(11,2), b.pickup_datetime.substr(11,2));});
+  console.log(dataAkhir);
+
+  var x = d3.scaleBand()
+    .range([ 0, width ])
+    .domain(data.map(function(d) { return d.pickup_datetime.substr(11,2); }))
+    .padding(0.01);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+
+  // Build X scales and axis:
+  var y = d3.scaleBand()
+    .range([ height, 0 ])
+    .domain(data.map(function(d) { return d.vendor_id; }))
+    .padding(0.01);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+  svg.selectAll()
+      .data(dataAkhir, function(d) {return d.time+':'+d.vendor;})
+      .enter()
+      .append("rect")
+      .attr("x", function(d) { return x(d.time) })
+      .attr("y", function(d) { return y(d.vendor) })
+      .attr("width", x.bandwidth() )
+      .attr("height", y.bandwidth() )
+      .style("fill", function(d) { return myColor(d.count)} )
+
+})
+
+</script>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<html>
