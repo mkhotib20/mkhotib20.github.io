@@ -1,279 +1,238 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Projek D3JS</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/style/style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>ULPLTD Kahayan Baru</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">Projek D3js</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                aria-expanded="false" aria-label="Toggle navigation"></button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home - Calendar View <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="map.html">Bubble Map</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index1.html">Bar Chart</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="donut.html">Donat Chart</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="streamgraph.html">Streamgraph</a>
-                    </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="heatmap.html">HeatMap</a>
+  <body>
+    <header class="header_area">
+      <div class="main_menu">
+        <div class="search_input" id="search_input_box">
+          <div class="container">
+            <form class="d-flex justify-content-between" method="" action="">
+              <input
+                type="text"
+                class="form-control"
+                id="search_input"
+                placeholder="Search Here"
+              />
+              <button type="submit" class="btn"></button>
+              <span
+                class="ti-close"
+                id="close_search"
+                title="Close Search"
+              ></span>
+            </form>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand logo_h" href="index.html"
+              ><img style="width: 70px;" src="img/logo.png" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Beranda</a>
                 </li>
-                </ul>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                    role="button" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="courses.html">Struktur</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="course-details.html">Profil Perusahaan</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                    role="button" aria-haspopup="true" aria-expanded="false">SML</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Ruang Lingkup</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Visi Misi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Kebijakan Lingkungan</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Denah</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Proses Bisnis</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                    role="button" aria-haspopup="true" aria-expanded="false">SMK 3</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Ruang Lingkup</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                    role="button" aria-haspopup="true" aria-expanded="false">Penghargaan</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Lingkungan</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">K3</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Kinerja</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
+          </div>
         </nav>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-3">Kelompok 1</h1>
-                <p class="lead">Visualisasi Informasi</p>
-                <hr class="my-2">
-                <p>1. Muhamad Khotib</p>
-                <p>2. Anggie Meythia</p>
-                <p>3. Gamal Akbar</p>
-            </div>
-        </div>
-        <div class="container shadwow">
-          <h1>Penjelasan Dataset</h1>
-          <p>Dataset terdiri dari 12 kolom dan 90287 baris. Dataset berisi data penggunaan transportasi online Taxi, Cabify dan Uber menggunakan EC Taximeter. 
-            Data dikumpulkan dalam rentang waktu Juni 2016 sampai dengan 20 Juli 2017. </p>
-          <hr>
-        </div>
+      </div>
+    </header>
+
+    <section class="home_banner_area">
+      <div class="banner_inner">
         <div class="container">
-          <h1>Tabel dan Tipe data</h1>
-          <table class="table table-inverse table-inverse table-responsive">
-            <thead class="thead-inverse">
-              <tr>
-                <th>Kolom</th>
-                <th>Penjelasan</th>
-                <th>Tipe Data</th>
-              </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">Id</td>
-                  <td><p>Primary key setiap trip yang terjadi</p></td>
-                  <td><p>int</p></td>
-                </tr>
-                <tr>
-                  <td scope="row">vendor_id</td>
-                  <td><p>Jenis penyedia layanan yang digunakan pengguna</p></td>
-                  <td>int</td>
-                </tr>
-                <tr>
-                    <td scope="row">pickup_datetime</td>
-                    <td>Waktu penjemputan</td>
-                    <td>Date & Time</td>
-                </tr>
-                <tr>
-                    <td scope="row">dropoff_datetime</td>
-                    <td>waktu sampai tujuan</td>
-                    <td>Date & Time</td>
-                  </tr>
-                  <tr>
-                      <td scope="row">pickup_longitude</td>
-                      <td>lokasi penjemputan longitude</td>
-                      <td>float</td>
-                    </tr>
-                    <tr>
-                        <td scope="row">pickup_latitude</td>
-                        <td>lokasi penjemputan latitude</td>
-                        <td>float</td>
-                      </tr>
-                      <tr>
-                          <td scope="row">dropoff_longitude</td>
-                          <td>Lokasi penurunan longitude</td>
-                          <td>float</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">dropoff_latitude</td>
-                            <td>lokasi penurunan latitude</td>
-                            <td>float</td>
-                          </tr>
-                          <tr>
-                              <td scope="row">store_and_fwd_flag</td>
-                              <td>Selalu berisi N, terkait dataset yang lain</td>
-                              <td>String</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">trip_duration</td>
-                                <td>Durasi perjalanan yang ditempuh </td>
-                                <td>int</td>
-                              </tr>
-                              <tr>
-                                  <td scope="row">dist_meters</td>
-                                  <td>Jarak perjalanan yang ditempuh</td>
-                                  <td>int</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">wait_sec</td>
-                                    <td>waktu mobil benar-benar berhenti selama perjalanan atau waktu tunggu dalam hitungan detik</td>
-                                    <td>int/td>
-                                  </tr>
-                                  <tr>
-              </tbody>
-          </table>
-          <hr>
+          <div class="row">
+            <div class="col-lg-12">
+              <div style="margin-top: 100px;" class="banner_content text-center">
+                <p class="text-uppercase">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                </p>
+                <h2 class="text-uppercase mt-4 mb-5">
+                  ULPLTD Kahayan Baru
+                </h2>
+                <div>
+                  <a href="#" class="primary-btn ml-sm-3 ml-0">Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container-fluid shadow-lg p-3 mb-5 bg-white rounded">
-            <div id="chart" class="clearfix"></div>
+      </div>
+    </section>
+   
+    <section class="feature_area section_gap_top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3">Pelayanan Terbaik</h2>
+              <p>
+                Kami melayani sepenuh hati untuk kepuasan pelanggan
+              </p>
+            </div>
+          </div>
         </div>
-        <script src="http://d3js.org/d3.v3.js"></script>
-        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-        <script>
-          var width = 960,
-              height = 750,
-              cellSize = 25; // cell size
-      
-          var no_months_in_a_row = Math.floor(width / (cellSize * 7 + 50));
-          var shift_up = cellSize * 3;
-      
-          var day = d3.time.format("%w"), // day of the week
-              day_of_month = d3.time.format("%e") // day of the month
-              day_of_year = d3.time.format("%j")
-              week = d3.time.format("%U"), // week number of the year
-              month = d3.time.format("%m"), // month number
-              year = d3.time.format("%Y"),
-              percent = d3.format(".1%"),
-              format = d3.time.format("%Y-%m-%d");
-      
-          var color = d3.scale.quantize()
-              .domain([40, 400])
-              .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
-      
-          var svg = d3.select("#chart").selectAll("svg")
-              .data(d3.range(2016, 2018))
-            .enter().append("svg")
-              .attr("width", width)
-              .attr("height", height)
-              .attr("class", "RdYlGn")
-            .append("g")
-      
-          var rect = svg.selectAll(".day")
-              .data(function(d) { 
-                return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1));
-              })
-            .enter().append("rect")
-              .attr("class", "day")
-              .attr("width", cellSize)
-              .attr("height", cellSize)
-              .attr("x", function(d) {
-                var month_padding = 1.2 * cellSize*7 * ((month(d)-1) % (no_months_in_a_row));
-                return day(d) * cellSize + month_padding; 
-              })
-              .attr("y", function(d) { 
-                var week_diff = week(d) - week(new Date(year(d), month(d)-1, 1) );
-                var row_level = Math.ceil(month(d) / (no_months_in_a_row));
-                return (week_diff*cellSize) + row_level*cellSize*8 - cellSize/2 - shift_up;
-              })
-              .datum(format);
-      
-          var month_titles = svg.selectAll(".month-title")  // Jan, Feb, Mar and the whatnot
-                .data(function(d) { 
-                  return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
-              .enter().append("text")
-                .text(monthTitle)
-                .attr("x", function(d, i) {
-                  var month_padding = 1.2 * cellSize*7* ((month(d)-1) % (no_months_in_a_row));
-                  return month_padding;
-                })
-                .attr("y", function(d, i) {
-                  var week_diff = week(d) - week(new Date(year(d), month(d)-1, 1) );
-                  var row_level = Math.ceil(month(d) / (no_months_in_a_row));
-                  return (week_diff*cellSize) + row_level*cellSize*8 - cellSize - shift_up;
-                })
-                .attr("class", "month-title")
-                .attr("d", monthTitle);
-      
-          var year_titles = svg.selectAll(".year-title")  // Jan, Feb, Mar and the whatnot
-                .data(function(d) { 
-                  return d3.time.years(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
-              .enter().append("text")
-                .text(yearTitle)
-                .attr("x", function(d, i) { return width/2 - 100; })
-                .attr("y", function(d, i) { return cellSize*5.5 - shift_up; })
-                .attr("class", "year-title")
-                .attr("d", yearTitle);
-      
-      
-          //  Tooltip Object
-          var tooltip = d3.select("body")
-            .append("div").attr("id", "tooltip")
-            .style("position", "absolute")
-            .style("z-index", "10")
-            .style("visibility", "hidden")
-            .text("a simple tooltip");
-      
-          d3.csv("data/data.csv", function(error, csv) {
-            var data = d3.nest()
-              .key(function(d) { return d.dropoff_datetime; })
-              .rollup(function(d) { return d[0].id; })
-              .map(csv);
-      
-            rect.filter(function(d) { return d in data; })
-                .attr("class", function(d) { return "day " + color(data[d]); })
-              .select("title")
-                .text(function(d) { return d + ": " + percent(data[d]); });
-      
-            //  Tooltip
-            rect.on("mouseover", mouseover);
-            rect.on("mouseout", mouseout);
-            function mouseover(d) {
-              tooltip.style("visibility", "visible");
-              var percent_data = (data[d] !== undefined) ? data[d] : 0;
-              var purchase_text = d + ": " + percent_data;
-      
-              tooltip.transition()        
-                          .duration(200)      
-                          .style("opacity", .9);      
-              tooltip.html(purchase_text)  
-                          .style("left", (d3.event.pageX)+30 + "px")     
-                          .style("top", (d3.event.pageY) + "px"); 
-            }
-            function mouseout (d) {
-              tooltip.transition()        
-                      .duration(500)      
-                      .style("opacity", 0); 
-              var $tooltip = $("#tooltip");
-              $tooltip.empty();
-            }
-      
-          });
-      
-          function dayTitle (t0) {
-            return t0.toString().split(" ")[2];
-          }
-          function monthTitle (t0) {
-            return t0.toLocaleString("en-us", { month: "long" });
-          }
-          function yearTitle (t0) {
-            return t0.toString().split(" ")[3];
-          }
-        </script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <center><img src="img/admin.svg"></center>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Layanan Admin</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <center><img src="img/admin.svg"></center>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Administrasi Terbaik</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <center><img src="img/admin.svg"></center>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">SDM Terbaik</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-area section_gap_s">
+      <div class="container">
+        <div class="row footer-bottom">
+          <div class="col-lg-6 single-footer-widget">
+            <h3>Contact Info</h3>
+            <p class="alamat-tit">Alamat</p>
+            <p>Jalan Raya ITS</p>
+            <br>
+            <p class="alamat-tit">Nomor</p>
+            <p>081253627</p>
+            <br>
+            <p class="alamat-tit">Email</p>
+            <p>mail@pln.com</p>
+            <br>
+          </div>
+          <div class="col-lg-4 col-md-6 single-footer-widget">
+            <h3>Let's Follow</h3>
+            <div class="col-lg-12 footer-social">
+              <a href="#"><i class="ti-facebook"></i></a>
+              <a href="#"><i class="ti-twitter"></i></a>
+              <a href="#"><i class="ti-dribbble"></i></a>
+              <a href="#"><i class="ti-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div class="row footer-bottom d-flex justify-content-between">
+          <p class="col-lg-12 col-sm-12 footer-text m-0 text-white text-center " >
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/owl-carousel-thumb.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
+  </body>
 </html>
