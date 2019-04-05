@@ -334,12 +334,28 @@ button:focus {
 .home_banner_area {
   z-index: 1;
   min-height: 753px;
-  position: relative;
-  background: linear-gradient(
-      rgba(178, 174, 160, 0.7), 
-      rgba(178, 174, 160, 0.7)
-    ), url('../img/bg.jpg') no-repeat center ;
-  background-size: cover; }
+  position: relative;}
+  .bg-1{
+    background: linear-gradient(
+        rgba(178, 174, 160, 0.7), 
+        rgba(178, 174, 160, 0.7)
+      ), url('../img/bg.jpg') no-repeat center ;
+    background-size: cover; 
+  }
+  .bg-2{
+    background: linear-gradient(
+        rgba(178, 174, 160, 0.7), 
+        rgba(178, 174, 160, 0.7)
+      ), url('../img/event/e1.jpg') no-repeat center ;
+    background-size: cover; 
+  }
+  .bg-3{
+    background: linear-gradient(
+        rgba(178, 174, 160, 0.7), 
+        rgba(178, 174, 160, 0.7)
+      ), url('../img/event/e2.jpg') no-repeat center ;
+    background-size: cover; 
+  }
   .home_banner_area .banner_inner {
     position: absolute;
     top: 40%;
@@ -402,8 +418,10 @@ button:focus {
         padding: 0px 45px; }
 
 .banner_area {
-  position: relative;
-  background: url(../img/banner/banner.jpg) no-repeat center center;
+  background: linear-gradient(
+      rgba(178, 174, 160, 0.7), 
+      rgba(178, 174, 160, 0.7)
+    ), url(../img/banner/banner.jpg) no-repeat center center;
   z-index: 1;
   min-height: 392px;
   padding-top: 0 !important; }
@@ -3347,10 +3365,10 @@ h6 {
       text-align: left; }
       .footer-area .footer-bottom .footer-social a {
         background: #334f6c;
-        width: 20px;
-        width: 40px;
+        font-size: 30px;
+        width: 60px;
         display: inline-table;
-        height: 40px;
+        height: 50px;
         text-align: center;
         padding-top: 10px;
         -webkit-transition: all 0.3s ease 0s;
